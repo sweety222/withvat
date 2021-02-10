@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <h1>VAT Calculator</h1><br> Amount(£): <input type="text" id="amount" name="txt_amount">
+    <br><br>
+    <button onclick="calculateVAT(amount.value)">Calculate Total Amount</button>
+    <script>
+
+        function calculateVAT(x) {
+            if (x.length == 0) {
+                alert("Numbers cannot be blank");
+                return;
+            }
+
+            if (isNaN(x)) {
+                alert("Value entered is not numeric");
+                return;
+            }
+
+
+            var vat = parseInt(x) * 1.1;
+            vat = parseInt(vat);
+            alert(" with 10% vat:" + vat);
+        }
+    </script>
+</body>
+</html>
